@@ -1,0 +1,35 @@
+.FooterMain {
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.FooterSubMain {
+  max-width: 1200px;
+  margin: auto;
+  height: 70px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.FooterSubMain button {
+  background: transparent;
+  border: none;
+  height: 30px;
+  cursor: pointer;
+}
+.FooterSubMain button svg {
+  width: 100%;
+  height: 100%;
+  color: #aeb8c4;
+}
+
+.FooterSubMain .active-footer svg{
+  color: #4c5968;
+  height: 35px;
+}
+.FooterSubMain  svg:hover,
+.FooterSubMain  svg:active{
+  color: #72777e;
+}  

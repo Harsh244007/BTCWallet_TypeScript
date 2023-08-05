@@ -1,26 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense, useContext, useEffect } from "react";
+import "./App.css";
+import { HideLandingLoader } from "./Components/Common/Common";
+import { MainContext } from "./Configs/Context/mainContext";
+import { NavBar, Footer, Main } from "./Components";
 
-function App() {
+const App: React.FC = () => {
+  const { state, changeDevice, changeWidth, handleHeight } = useContext(MainContext)!;
+
+  useEffect(() => {
+    setTimeout(HideLandingLoader, 2000);
+
+    const handleResize = () => {
+      const width = window.innerWidth;
+      changeWidth(window.innerWidth);
+      if (width < 1022) changeDevice(0);
+      else changeDevice(1);
+    };
+
+    window.addEventListener("resize", handleResize, { passive: true });
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [changeDevice, changeWidth]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Suspense fallback={"Loading..."}>
+        <NavBar />
+      </Suspense>
+      <Suspense fallback={"Loading..."}>
+        <Main />
+      </Suspense>
+      <Suspense fallback={"Loading..."}>
+        <Footer />
+      </Suspense>
     </div>
   );
-}
+};
 
 export default App;

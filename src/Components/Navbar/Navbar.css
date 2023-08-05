@@ -1,0 +1,75 @@
+.NavBarMain {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  z-index: 16;
+  width: 100%;
+}
+.NavBarSubMain {
+  padding: 0px 20px;
+  max-width: 1200px;
+  height: max-content;
+  margin: auto;
+  z-index: 10;
+  position: relative;
+}
+.MobileNavBarMain,
+.NavBarHeaderMain,
+.DesktopNavBarMain {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  position: relative;
+}
+.mainHeaderName {
+  color: #4c5968;
+  font-weight: 600;
+}
+
+.mainHeaderBackButton,
+.mainHeaderMenuIcon {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #aeb8c4;
+  font-size: 22px;
+  width: max-content;
+  height: 32px;
+}
+.mainHeaderBackButton svg,
+.mainHeaderMenuIcon svg {
+  width: 100%;
+  height: 30px;
+  color: #aeb8c4;
+}
+
+.mainHeaderBackButton:active,
+.mainHeaderBackButton:hover,
+.mainHeaderMenuIcon:active,
+.mainHeaderMenuIcon:hover,
+.mainHeaderBackButton svg:active,
+.mainHeaderBackButton svg:hover,
+.mainHeaderMenuIcon svg:active,
+.mainHeaderMenuIcon svg:hover {
+  color: #747474;
+}
+.redColor{
+  color: red;
+}
+.redColor svg{
+  color: red;
+}
+.mainHeaderMenuIcon{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.mainHeaderName:hover,.mainHeaderName:active{
+  color: black;
+  cursor: pointer;
+}

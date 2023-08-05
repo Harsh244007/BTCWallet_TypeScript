@@ -1,0 +1,92 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 300px;
+  height: 100%;
+  max-height: 300px;
+  width: 100%;
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container {
+  height: 150px;
+  width: 100%;
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.row {
+  display: flex;
+  width: 100%; /* Adjust this as needed */
+  justify-content: space-between;
+  top: 20px;
+  position: absolute;
+}
+
+.lower-text,
+.higher-text {
+  font-size: 18px;
+  color: #ccc;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  gap: 15px;
+}
+.lower-text {
+  left: 10px;
+}
+
+.higher-text {
+  right: 40px;
+}
+
+.bottom-text {
+  font-size: 18px;
+  font-weight: 600;
+  /* color: #888; */
+  align-items: center;
+  display: flex;
+  gap: 15px;
+}
+.orangeBlinker {
+  background-color: orange;
+  width: 8px;
+  height: 8px;
+  box-shadow: 0px 0px 4px 1px orange;
+  border-radius: 50%;
+  /* outline: 1px solid orange; */
+}
+
+.redBlinker {
+  background-color: red;
+  width: 5px;
+  height: 5px;
+  box-shadow: 0px 0px 2px 1px red;
+  border-radius: 50%;
+  /* outline: 1px solid orange; */
+}
+
+.greenBlinker {
+  background-color: green;
+  width: 5px;
+  height: 5px;
+  box-shadow: 0px 0px 2px 1px green;
+  border-radius: 50%;
+  /* outline: 1px solid orange; */
+}
+.recharts-responsive-container{
+  min-height: 250px;
+}

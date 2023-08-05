@@ -1,0 +1,26 @@
+.MainChart {
+  background-color: #eceff3;
+  width: 100%;
+  margin: 71px 0px 0px 0px;
+  padding-bottom: 71px;
+  overflow-y: hidden;
+  height: 100vh;
+}
+.ChartSubMain {
+  padding: 20px;
+  max-width: 1200px;
+  /* height: 50px; */
+  display: flex;
+  height: 100%;
+  /* justify-content: space-around;
+  align-items: center; */
+  flex-wrap: wrap;
+  margin: auto;
+}
+.firstTabMain{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-start;
+}
